@@ -171,6 +171,18 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; }
 .contact-list strong { display: block; color: var(--brand); font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 2px; }
 .contact-list a { color: var(--ink); }
 .dove-map iframe { width: 100%; height: 380px; border: 0; border-radius: var(--radius); box-shadow: var(--shadow); display: block; }
+.dove-maps { display: grid; gap: 16px; }
+.map-fig { margin: 0; }
+.map-fig iframe { width: 100%; height: 210px; border: 0; border-radius: var(--radius); box-shadow: var(--shadow); display: block; }
+.map-fig figcaption { margin-top: 8px; font-size: .88rem; color: var(--muted); text-align: center; }
+
+/* Icone social */
+.socials { display: flex; gap: 10px; margin-top: 16px; }
+.socials a {
+  width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center;
+  background: rgba(255,255,255,.08); color: #cfcfcf; transition: background .2s, color .2s, transform .2s;
+}
+.socials a:hover { background: var(--brand); color: #fff; transform: translateY(-2px); }
 
 /* ---------- CTA finale ---------- */
 .final-cta { background: linear-gradient(160deg, var(--brand-soft), var(--brand)); color: #fff; text-align: center; }
