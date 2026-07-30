@@ -53,3 +53,24 @@
     // [[TRACKING]] se choice === 'accept' caricare GTM/Pixel
   });
 })();
+
+/* Rivelazione elementi allo scroll (fade-up) */
+(function () {
+  if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  if (!("IntersectionObserver" in window)) return;
+  var sel = ".section-head, .card, .feature, .review, .gallery-item, .about-copy, .about-media, .hero-copy, .hero-media, .contatti-copy, .contatti-form, .dove-info, .dove-map, .stat";
+  var els = Array.prototype.slice.call(document.querySelectorAll(sel));
+  if (!els.length) return;
+  els.forEach(function (el) {
+    el.classList.add("reveal");
+    var parent = el.parentElement;
+    var idx = parent ? Array.prototype.indexOf.call(parent.children, el) : 0;
+    el.style.transitionDelay = Math.min(idx, 5) * 60 + "ms";
+  });
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add("is-visible"); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+  els.forEach(function (el) { io.observe(el); });
+})();
