@@ -237,7 +237,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; }
    ========================================================= */
 @media (max-width: 1024px) {
   .hero-grid { grid-template-columns: 1fr; }
-  .hero-media { order: -1; max-width: 380px; margin: 0 auto; }
+  .hero-media { order: -1; width: 100%; max-width: 220px; margin: 0 auto; }
   .services { grid-template-columns: repeat(2, 1fr); }
   .reviews { grid-template-columns: 1fr; }
   .about-grid, .dove-grid, .info-grid { grid-template-columns: 1fr; gap: 34px; }
