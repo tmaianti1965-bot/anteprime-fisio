@@ -268,8 +268,12 @@ a { color: inherit; text-decoration: none; }
   .section { padding: 56px 0; }
   .footer-grid { grid-template-columns: 1fr; }
   .cookie-banner { flex-direction: column; text-align: center; }
-  .hero-media { width: 100%; max-width: 190px; margin: 0 auto 12px; }
+  .hero-media { width: 100%; max-width: 190px; margin: 12px auto; order: 2; }
   .hero { padding: 32px 0 56px; }
+  .hero-copy { display: contents; }
+  .hero-headline { order: 1; }
+  .hero-sub { order: 3; }
+  .hero-sub .lead { font-size: 1.02rem; }
 }
 
 /* ===== Animazioni allo scroll (fade-up) ===== */
